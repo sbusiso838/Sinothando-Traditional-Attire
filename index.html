@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinothando Traditional Attire | Luxury Zulu Regalia & Beadwork</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-cream: #fbf9f5;
+            --bg-dark: #141210;
+            --card-bg: #ffffff;
+            --gold: #c89b3c;
+            --gold-light: #e5c372;
+            --terracotta: #9e3b24;
+            --text-main: #1f1c18;
+            --text-muted: #665e54;
+            --whatsapp: #25d366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg-cream);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+        }
+
+        .pattern-bar {
+            height: 8px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--gold) 0px,
+                var(--gold) 20px,
+                var(--terracotta) 20px,
+                var(--terracotta) 40px,
+                var(--bg-dark) 40px,
+                var(--bg-dark) 60px
+            );
+        }
+
+        nav {
+            background: rgba(20, 18, 16, 0.96);
+            padding: 16px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(200, 155, 60, 0.3);
+        }
+        .logo {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-light);
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+        }
+        .nav-cta {
+            background: var(--gold);
+            color: var(--bg-dark);
+            padding: 9px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .nav-cta:hover { background: var(--gold-light); }
+
+        header {
+            background: linear-gradient(to bottom, rgba(20, 18, 16, 0.65), rgba(20, 18, 16, 0.88)),
+                        url('image 1.jpeg') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 120px 20px 100px;
+            position: relative;
+        }
+        .badge {
+            display: inline-block;
+            border: 1.5px solid var(--gold);
+            color: var(--gold-light);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            background: rgba(0,0,0,0.4);
+        }
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+        header h1 span { color: var(--gold-light); }
+        header p {
+            max-width: 650px;
+            margin: 0 auto 32px;
+            color: #e2dcd5;
+            font-size: 1.1rem;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: var(--whatsapp);
+            color: #fff;
+            padding: 15px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            transition: 0.3s;
+        }
+        .btn-primary:hover { transform: translateY(-2px); background: #20bd5a; }
+        .btn-secondary {
+            border: 1.5px solid var(--gold-light);
+            color: var(--gold-light);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            background: rgba(0,0,0,0.3);
+        }
+        .btn-secondary:hover { background: var(--gold); color: var(--bg-dark); }
+
+        .highlights {
+            background: var(--bg-dark);
+            color: #fff;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 35px 8%;
+            text-align: center;
+            border-bottom: 3px solid var(--gold);
+        }
+        .highlight-item h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-light);
+            font-size: 1.05rem;
+            margin-bottom: 5px;
+        }
+        .highlight-item p { font-size: 0.9rem; color: #bdb5ab; }
+
+        .container {
+            max-width: 1240px;
+            margin: 70px auto;
+            padding: 0 20px;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        .section-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.3rem;
+            color: var(--bg-dark);
+            margin-bottom: 10px;
+        }
+        .section-header p {
+            color: var(--text-muted);
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+        .filter-btn {
+            background: transparent;
+            border: 1.5px solid #d8cfc2;
+            padding: 9px 22px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-main);
+            transition: 0.25s;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--bg-dark);
+            color: var(--gold-light);
+            border-color: var(--bg-dark);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1.5px solid #ede7dd;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+        }
+        .img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 360px;
+            background: #221f1c;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.5s ease;
+        }
+        .card:hover .img-wrapper img { transform: scale(1.05); }
+        .tag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(20, 18, 16, 0.85);
+            color: var(--gold-light);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(200, 155, 60, 0.4);
+        }
+        .card-body {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+        .card-body h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            color: var(--bg-dark);
+            margin-bottom: 8px;
+        }
+        .card-body p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .book-btn {
+            display: block;
+            text-align: center;
+            background: var(--bg-dark);
+            color: var(--gold-light);
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: 0.3s;
+            border: 1px solid var(--gold);
+        }
+        .book-btn:hover {
+            background: var(--gold);
+            color: var(--bg-dark);
+        }
+
+        .booking-banner {
+            background: linear-gradient(135deg, #1c1815, #2d241c);
+            color: white;
+            border-radius: 20px;
+            padding: 55px 30px;
+            text-align: center;
+            margin-top: 80px;
+            border: 1.5px solid var(--gold);
+        }
+        .booking-banner h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-light);
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .booking-banner p {
+            max-width: 600px;
+            margin: 0 auto 28px;
+            color: #dfd8cf;
+        }
+        .phone-display {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 22px;
+            letter-spacing: 1px;
+        }
+
+        .float-wa {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--whatsapp);
+            color: white;
+            padding: 14px 22px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .lightbox img {
+            max-width: 95%;
+            max-height: 90vh;
+            border-radius: 10px;
+            border: 2px solid var(--gold);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+
+        footer {
+            background: var(--bg-dark);
+            color: #9e9589;
+            text-align: center;
+            padding: 45px 20px;
+            margin-top: 70px;
+            border-top: 1px solid rgba(200, 155, 60, 0.2);
+        }
+        footer h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-light);
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pattern-bar"></div>
+
+    <nav>
+        <a href="#" class="logo">SINOTHANDO</a>
+        <a href="tel:0814146710" class="nav-cta">Call: 081 414 6710</a>
+    </nav>
+
+    <header>
+        <div class="badge">Authentic Heritage &amp; Craftsmanship</div>
+        <h1>Sinothando <span>Traditional Attire</span></h1>
+        <p>Handcrafted Imvunulo, custom beadwork, Isicholo headwear, and full ceremonial regalia for Umabo, Umemulo, weddings, and cultural celebrations.</p>
+        <div class="hero-buttons">
+            <a href="https://wa.me/27814146710?text=Hello%20Sinothando%20Traditional%20Attire,%20I%20would%20like%20to%20enquire%20about%20booking%20attire%20for%20my%20event." class="btn-primary" target="_blank">Book on WhatsApp</a>
+            <a href="#collection" class="btn-secondary">Explore Collection</a>
+        </div>
+    </header>
+
+    <div class="highlights">
+        <div class="highlight-item">
+            <h4>Custom Beadwork</h4>
+            <p>Hand-woven neck rings, wrist cuffs &amp; ceremonial pieces</p>
+        </div>
+        <div class="highlight-item">
+            <h4>Event Hire &amp; Sales</h4>
+            <p>Available for individual bookings or full bridal &amp; dance groups</p>
+        </div>
+        <div class="highlight-item">
+            <h4>Direct Consultation</h4>
+            <p>Call or WhatsApp 081 414 6710 for sizes, colors &amp; pricing</p>
+        </div>
+    </div>
+
+    <div class="container" id="collection">
+        <div class="section-header">
+            <h2>Previous Bookings &amp; Beadwork</h2>
+            <p>Tap any photo to view full size, or click the booking button below an item to enquire directly on WhatsApp.</p>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterItems('all', this)">All Attire Collection</button>
+            <button class="filter-btn" onclick="filterItems('beadwork', this)">Beadwork &amp; Rings</button>
+            <button class="filter-btn" onclick="filterItems('fullset', this)">Full Sets &amp; Hats</button>
+        </div>
+
+        <div class="gallery" id="galleryContainer">
+            <!-- image 1.jpeg -->
+            <div class="card" data-category="fullset">
+                <div class="img-wrapper" onclick="openLightbox('image 1.jpeg')">
+                    <span class="tag">Featured 1</span>
+                    <img src="image 1.jpeg" alt="Sinothando Attire 1" onerror="this.src='image 1.jpg';">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3>Sinothando Signature Piece #1</h3>
+                        <p>Handcrafted traditional Zulu attire and luxury bespoke beadwork piece #1.</p>
+                    </div>
+                    <a href="https://wa.me/27814146710?text=Hi%20Sinothando,%20I%20would%20like%20information%20and%20pricing%20for%20Piece%201." class="book-btn" target="_blank">Enquire About This Piece</a>
+                </div>
+            </div>
+
+            <!-- image 2.jpeg -->
+            <div class="card" data-category="beadwork">
+                <div class="img-wrapper" onclick="openLightbox('image 2.jpeg')">
+                    <span class="tag">Featured 2</span>
+                    <img src="image 2.jpeg" alt="Sinothando Attire 2" onerror="this.src='image 2.jpg';">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3>Sinothando Signature Piece #2</h3>
+                        <p>Handcrafted traditional Zulu attire and luxury bespoke beadwork piece #2.</p>
+                    </div>
+                    <a href="https://wa.me/27814146710?text=Hi%20Sinothando,%20I%20would%20like%20information%20and%20pricing%20for%20Piece%202." class="book-btn" target="_blank">Enquire About This Piece</a>
+                </div>
+            </div>
+
+            <!-- image 3.jpeg -->
+            <div class="card" data-category="fullset">
+                <div class="img-wrapper" onclick="openLightbox('image 3.jpeg')">
+                    <span class="tag">Featured 3</span>
+                    <img src="image 3.jpeg" alt="Sinothando Attire 3" onerror="this.src='image 3.jpg';">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3>Sinothando Signature Piece #3</h3>
+                        <p>Handcrafted traditional Zulu attire and luxury bespoke beadwork piece #3.</p>
+                    </div>
+                    <a href="https://wa.me/27814146710?text=Hi%20Sinothando,%20I%20would%20like%20information%20and%20pricing%20for%20Piece%203." class="book-btn" target="_blank">Enquire About This Piece</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Dynamically load exactly the files present in your folder structure (1 to 56, 74, and 78)
+            const container = document.getElementById('galleryContainer');
+            let cardsHTML = '';
+
+            // List of exact file numbers existing in your workspace
+            const fileNumbers = [];
+            for (let i = 1; i <= 56; i++) fileNumbers.push(i);
+            fileNumbers.push(74);
+            fileNumbers.push(78);
+
+            fileNumbers.forEach((num, index) => {
+                let cat = (index % 2 !== 0) ? 'fullset' : 'beadwork';
+                let filename = `download (${num}).png.jpeg`;
+                
+                cardsHTML += `
+                <div class="card" data-category="${cat}">
+                    <div class="img-wrapper" onclick="openLightbox('${filename}')">
+                        <span class="tag">Collection ${num}</span>
+                        <img src="${filename}" alt="Collection ${num}" onerror="
+                            if(this.src.includes('.png.jpeg')) {
+                                this.src = 'download (${num}).png';
+                            } else if(this.src.includes('.png')) {
+                                this.src = 'download(${num}).png.jpeg';
+                            } else {
+                                this.src = 'download (${num}).jpg';
+                            }
+                        ">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3>Traditional Attire Collection #${num}</h3>
+                            <p>Handcrafted traditional Zulu attire and custom beadwork collection item #${num}.</p>
+                        </div>
+                        <a href="https://wa.me/27814146710?text=Hi%20Sinothando,%20I%20would%20like%20information%20and%20pricing%20for%20Collection%20${num}." class="book-btn" target="_blank">Enquire About This Piece</a>
+                    </div>
+                </div>`;
+            });
+
+            container.insertAdjacentHTML('beforeend', cardsHTML);
+        </script>
+
+        <div class="booking-banner">
+            <h2>Planning an Event or Ceremony?</h2>
+            <p>Contact us directly for availability, custom color orders, fittings, and group package rates.</p>
+            <div class="phone-display">📞 081 414 6710</div>
+            <div class="hero-buttons">
+                <a href="https://wa.me/27814146710?text=Hello%20Sinothando,%20I%20would%20like%20to%20get%20more%20information%20about%20attire%20for%20my%20event." class="btn-primary" target="_blank">WhatsApp Us Now</a>
+                <a href="tel:0814146710" class="btn-secondary">Call 081 414 6710</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Full view">
+    </div>
+
+    <a href="https://wa.me/27814146710?text=Hello%20Sinothando%20Traditional%20Attire,%20I%20have%20an%20enquiry." class="float-wa" target="_blank">
+        WhatsApp • 081 414 6710
+    </a>
+
+    <footer>
+        <h3>Sinothando Traditional Attire</h3>
+        <p>Bookings &amp; Enquiries: <strong>081 414 6710</strong></p>
+        <p style="margin-top: 12px; font-size: 0.85rem;">&copy; 2026 Sinothando Traditional Attire. All Rights Reserved.</p>
+    </footer>
+
+    <div class="pattern-bar"></div>
+
+    <script>
+        function filterItems(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
